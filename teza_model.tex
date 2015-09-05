@@ -1,0 +1,572 @@
+\documentclass[a4paper, 12pt]{report} 
+\usepackage{etoolbox}
+	\patchcmd{\thebibliography}{\chapter*{\bibname}}{\subsection*{\bibname}}{}{}
+	\patchcmd{\tableofcontents}{\chapter*}{\section*}{}{}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[english,russian,romanian]{babel}
+\usepackage{amsfonts}
+\usepackage{amsbsy}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+\usepackage{indentfirst}
+
+%\usepackage{newtxtext,newtxmath}
+
+%\usepackage{fontspec}
+%\usepackage{libertineotf}
+%\setmainfont[LetterSpace=2.5]{Times New Roman}
+%\setmainfont{Times New Roman}
+
+%\usepackage{unicode-math}
+%\setmainfont{XITS Math}
+ 
+\special{papersize=210mm,297mm}
+\usepackage[top=2.2cm, bottom=2.5cm, left=3.0cm, right=1.5cm]{geometry}
+\renewcommand{\baselinestretch}{1.5}
+
+\newtheorem{dfn}{Definiția}[section]
+\newtheorem{rmk}[dfn]{Remarca}
+\newtheorem{teo}[dfn]{Teorema}
+\newtheorem{lem}[dfn]{Lema}
+\newtheorem{cor}[dfn]{Corolarul}
+\newtheorem{prop}[dfn]{Propoziția}
+\newtheorem{ex}[dfn]{Exemplul}
+\newtheorem{pty}[dfn]{Proprietatea}
+
+\makeatletter
+\def\@biblabel#1{#1. }
+\makeatother 
+
+\makeindex
+
+\begin{document}
+
+\renewcommand{\thedfn}{\arabic{section}.\arabic{dfn}}
+\renewcommand{\theteo}{\arabic{section}.\arabic{teo}}
+\renewcommand{\thermk}{\arabic{section}.\arabic{rmk}}
+\renewcommand{\thecor}{\arabic{section}.\arabic{cor}}
+\renewcommand{\thelem}{\arabic{section}.\arabic{lem}}
+\renewcommand{\theprop}{\arabic{section}.\arabic{pr}}
+\renewcommand{\theex}{\arabic{section}.\arabic{ex}}
+\renewcommand{\thepty}{\arabic{section}.\arabic{pty}}
+
+\renewcommand{\thesection}{\arabic{section}.}
+
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}.}
+\renewcommand{\contentsname}{Cuprins}%\contentsname
+\renewcommand{\baselinestretch}{1.5}
+\renewcommand{\proofname}{\bf Demonstra\c tie}
+	\renewcommand{\qedsymbol}{}
+
+\thispagestyle{empty}
+\begin{center}
+{\bf \large
+<DENUMIREA UNIVERSITĂȚII CU MAJUSCULE> \\}
+\end{center}
+
+\vspace*{10mm}
+
+\begin{flushright}
+{\bf\large Cu titlu de manuscris\\
+C.Z.U.: <COD(URI) CZU>}
+\end{flushright}
+
+\vspace*{1cm}
+
+\begin{center}
+{\bf\large <NUMELE ȘI PRENUMELE AUTORULUI CU MAJUSCULE>}
+\end{center}
+
+\vspace*{0.5cm}
+
+\begin{center}
+{\bf\Large <DENUMIREA TEZEI CU MAJUSCULE> }
+\end{center}
+
+\vspace*{0.5cm}
+
+\begin{center}
+{\bf <CODUL SPECIALITĂȚII> -- <DENUMIREA SPECIALITĂȚII CU MAJUSCULE>}
+\end{center}
+
+\vspace*{1cm}
+
+\begin{center}
+{\bf\large Teză de doctor în științe matematice}
+\end{center}
+
+\vspace*{5mm}
+
+{\bf Conducător științific:} \hspace*{3.5cm}{\bf <Numele Prenumele conducătorului>}
+
+\hspace*{8cm}
+<gradul științifico-didactic al conducătorului>
+
+\hspace*{8cm}
+<gradul științifico-didactic al conducătorului>
+
+\hspace*{8cm} 
+<gradul științifico-didactic al conducătorului>
+
+\vspace*{0.5cm}
+{\bf Autorul: }
+
+\vspace*{2.5cm}
+
+\begin{center}
+{\bf \large CHIȘINĂU, <anul susținerii>}
+\end{center}
+
+\newpage
+
+\vspace*{10cm}
+\centerline {\large \bf \copyright \hspace*{0.2cm} <Numele Prenumele autorului>, 2015}
+
+\newpage
+
+\renewcommand{\contentsname}{\centering CUPRINS}
+\tableofcontents
+
+\newpage
+
+\centerline{\bf ADNOTARE}
+
+\addcontentsline{toc}{section}{\bf ADNOTĂRI}
+
+{\renewcommand{\baselinestretch}{1.17}
+\selectfont
+
+\centerline
+{\bf la teza de doctor a <dlui/dnei> <Numele Prenumele autorului>}
+
+\centerline
+{\bf ''<Denumirea tezei>''}
+
+\vspace*{4mm}
+
+Teza este înaintată pentru obținerea gradului de doctor în științe matematice, 
+la specialitatea <codul specialității> - <denumirea specialității>. 
+Teza a fost elaborată la <Denumirea Universității>, <Orașul>, anul <anul>.
+
+{\bf Structura tezei:} teza este scrisă în limba română și 
+constă din: introducere, <numărul de capitole>
+capitole, concluzii generale și recomandări, bibliografie din <numărul de surse bibliografice> titluri, <numărul de pagini de bază> pagini text de bază. Rezultatele obținute sunt publicate în <numărul de lucrări> lucrări științifice.
+
+{\bf Cuvinte-cheie:} <cuvânt-cheie>, <cuvânt-cheie> <etc>.
+
+{\bf Domeniul de studiu al tezei:} <domeniul de studiu într-o propoziție>.
+
+{\bf Scopul și obiectivele lucrării:} 
+
+- stabilirea/determinarea ...;
+
+- stabilirea/determinarea ...;
+
+{\bf Noutatea și originalitatea științifică:} 
+
+- a fost elaborată/stabilită ...;
+
+- a fost elaborată/stabilită ...;
+
+{\bf Problema științifică importantă soluționată} constă în elaborarea/determinarea ... , ceea ce a condus la determinarea/stabilirea ... .
+
+{\bf Semnificația teoretică și valoarea aplicativă a lucrării:} constă în elaborarea ... .
+
+{\bf Implementarea rezultatelor științifice:} 
+
+- rezultatele din teză pot ...;
+
+- rezultatele și metodele dezvoltate în teză pot fi aplicate ... .
+
+}
+
+\newpage
+
+\newpage
+
+\selectlanguage{russian}
+
+\centerline{{\bf АННОТАЦИЯ}}
+
+{\renewcommand{\baselinestretch}{1.0}
+\selectfont
+
+\centerline{\bf на диссертацию <Numele Prenumele autorului>}
+
+\centerline
+{\bf <<Denumirea}
+
+\centerline
+{\bf tezei>>}
+
+\vspace*{4mm}
+
+Диссертация представлена на соискание ученой степени доктора математических наук, 
+специальность <codul specialității> - <denumirea specialității>. 
+Диссертация разработана в <Denumirea Universității>, в <Orașul>, в <anul> году.
+
+\textbf{Структура работы:} работа написана на румынском языке и состоит из введения, <numărul de capitole> глав, общих выводов и рекомендации, списка цитированных источников из <numărul de surse bibliografice> названий, <numărul de pagini de bază> страниц основного текста. По теме диссертации опубликованы <numărul de lucrări> научных работ.
+
+{\bf Ключевые слова:} <cuvânt-cheie 1>, <cuvânt-cheie 2> ... .
+
+{\bf Область исследования:} <domeniul de cercetare într-o propoziție>.
+
+{\bf Цели и задачи исследования:} 
+
+- установка/определение ...;
+
+- установка/определение ...;
+
+- установка/определение ....
+
+{\bf Научная новизна и оригинальность:} 
+
+- был разработан новый ...;
+
+- были установлены некоторые ...;
+
+- были доказаны ....
+
+{\bf Решенная научная проблема} заключается в разработке ..., что привело к установке ....
+
+{\bf Теоретическая и прикладная значимость:} состоит в разработке  новых ....
+
+{\bf Внедрение научных результатов:} 
+
+- результаты и методы, разработанные в диссертации могут быть применены ...;
+
+- результаты диссертации могут служить ....
+
+}
+
+\newpage
+
+\selectlanguage{english}
+
+\centerline{\bf ANNOTATION}
+
+{\renewcommand{\baselinestretch}{1.18}
+\selectfont
+
+\centerline{\bf for PhD thesis by $<$author's First name and Last name$>$}
+
+\centerline{\bf "$<$thesis's title$>$"}
+
+\vspace*{4mm}
+
+This thesis is submitted to obtain a doctoral degree in mathematics, specialty $<$specialty cod$>$ - $<$specialty name$>$.
+It was elaborated at $<$Name of the University$>$, in $<$City$>$, $<$year$>$.
+
+{\bf Thesis structure:} the thesis is written in Romanian and consists of an introduction, $<$number of chapters$>$ chapters, conclusions, $<$number o sources$>$ bibliography titles, $<$numebr of base pages$>$ pages of main text. The obtained results are published in $<$number of works$>$ scientific papers.
+
+{\bf Keywords:} $<$keyword1$>$, $<$keyword2$>$ .... 
+
+{\bf Field of study of the thesis:} $<$field of study covered by one sentence$>$.
+
+{\bf Thesis aim and objectives:} 
+
+- establishment of ...;
+
+- determination of ...;
+
+{\bf Scientific novelty and originality:} 
+
+- was developed a new ...;
+
+- were established some ...;
+
+- were proved ....
+
+{\bf The scientific problem solved} consist of development a new ..., which led to the establishment of ....
+
+{\bf The theoretical significance and applicative value of the thesis:} consists in development of new ....
+
+{\bf The implementation of the scientific results:} 
+
+- the results and methods developed in this thesis can be applied in ...;
+
+- the results of the thesis can serve as ....
+
+}
+
+\newpage
+
+\selectlanguage{romanian}
+
+\begin{center}
+\section*{INTRODUCERE}
+\end{center}
+\addcontentsline{toc}{section}{\bf INTRODUCERE}
+
+{\bf Actualitatea temei}. ...
+
+{\bf Problema 1.} ...
+
+{\bf Problema 2.} ...
+
+{\bf Scopul și obiectivele lucrării.}
+
+...
+
+{\bf Metodica cercetării.} ...
+
+{\bf Inovația științifică.} 
+
+...
+
+{\bf Problema științifică importantă soluționată} ...
+
+{\bf Valoarea teoretică și practică a lucrării.} ...
+
+{\bf Implementarea rezultatelor științifice.} ...
+
+{\bf Aprobarea lucrării.}
+
+...
+
+{\bf Publicații.} 
+
+...
+
+{\bf Sumarul compartimentelor tezei.} 
+
+...
+
+\newpage
+
+\begin{center}
+\section[\bf $<$DENUMIREA CAPITOLULUI 1$>$]{\bf $<$DENUMIREA CAPITOLULUI 1$>$}
+\end{center}
+
+...
+
+\strut
+\subsection{$<$Denumirea paragrafului 1.1$>$}
+
+...
+
+\begin{dfn} $<$Definiție$>$
+\end{dfn}
+
+\begin{ex} $<$Exemplu$>$
+\end{ex}
+
+...
+
+\strut
+\subsection{$<$Denumirea paragrafului 1.2$>$}
+
+...
+
+\strut
+\subsection{Concluzii la capitolul 1}
+
+...
+
+\newpage
+
+\begin{center}
+\section[\bf $<$DENUMIREA CAPITOLULUI 2$>$]{\bf $<$DENUMIREA CAPITOLULUI 2$>$}
+\end{center}
+
+...
+
+\strut
+\subsection{$<$Denumirea paragrafului 2.1$>$}
+
+...
+
+\begin{prop}$<$Propoziție$>$
+\end{prop}
+
+...
+
+\strut
+\subsection{$<$Denumirea paragrafului 2.2$>$}
+
+...
+
+\begin{lem}$<$Lemă$>$
+\end{lem}
+
+\begin{teo}$<$Teoremă$>$
+\end{teo}
+
+\begin{rmk}$<$Remarcă$>$
+\end{rmk}
+
+...
+
+\subsection{Concluzii la capitolul 2}
+
+\newpage
+
+\begin{center}
+\section[\bf $<$DENUMIREA CAPITOLULUI 3$>$]{\bf $<$DENUMIREA CAPITOLULUI 3$>$}
+\end{center}
+
+...
+
+\strut
+\subsection{$<$Denumirea paragrafului 3.1$>$}
+
+...
+
+\begin{teo}$<$Teoremă$>$
+\end{teo}
+
+\begin{cor}$<$Proprietate$>$
+\end{cor}
+
+...
+
+\strut
+\subsection{$<$Denumirea paragrafului 3.2$>$}
+
+...
+
+\begin{pty}$<$Proprietate$>$
+\end{pty}
+
+...
+
+\subsection{Concluzii la capitolul 3}
+
+...
+
+\newpage
+
+\begin{center}
+\section*{CONCLUZII GENERALE ȘI RECOMANDĂRI}
+\end{center}
+\addcontentsline{toc}{section}{\bf CONCLUZII GENERALE ȘI RECOMANDĂRI}
+
+{\bf Concluzii generale:}
+
+...
+
+{\bf Recomandări:}
+
+...
+
+\newpage
+
+\begin{center}
+\section*{BIBLIOGRAFIE}
+\end{center}
+\addcontentsline{toc}{section}{\bf BIBLIOGRAFIE}
+
+\newcounter{firstbib}
+\renewcommand{\bibname}{A. Referințe bibliografice în limba engleză}
+\begin{thebibliography}{99}
+
+\bibitem{Ach} Acharyya S. K., Chattopadhyaya K. C., Ghosh P. P. Constructing Banaschewski Compactification Without Dedekind Completeness Axiom. In: International Journal for Mathematics and Mathematical Sciences, 2004, vol. 69, p. 3799-3816.
+
+\bibitem{Alex} Alexandroff P., Hopf H. Topologie I. Berlin: Springer, 1935. 638 p.
+
+\bibitem{Arh} Arkhangel'skii A. V. Topological Function Spaces. Dordrecht: Kluwer Academic Publishers Group, 1992. 211 p.
+
+\bibitem{MMCArhTk} Arhangel'skii A. V., Tkachuk V. V. Function spaces and topological invariants. Moscow: Moscow University P.H., 1985 (in Russian). 85 p.
+
+\bibitem{Arh3} Arhangel'skii A. V. On linear homomorphisms of  function spaces. In: Doklady  Acad. Nauk SSSR 264 (1982), vol. 6, p. 1289-1292. English translation: In: Soviet Math. Dokl., 1982, vol. 25, p. 852-855.
+
+\bibitem{Eng} Engelking R. General Topology. Berlin: Heldermann, 1989. 529 p.
+
+\bibitem{Eng2} Engelking R. Dimension theory. Amsterdam: North-Holland Pub. Co., 1978. 314 p.
+
+\bibitem{Kru} Krupski M. Topological dimension of a space is determined by the pointwise topology of its function space. In: arXiv.org, 2014. http://arxiv.org/pdf/1411.1549.pdf (vizitat 7.04.2015)
+
+\setcounter{firstbib}{\value{enumiv}}
+
+\end{thebibliography}
+
+\renewcommand{\bibname}{B. Referințe bibliografice în limba franceză}
+\begin{thebibliography}{9}
+
+\setcounter{enumiv}{\value{firstbib}}
+
+\bibitem{Ban} Banach S. Théorie des opérations linéaires. Warszawa, 1932. 261 p.
+
+\bibitem{Kura} Kuratowski C. Sur la topologies des espaces, fonctionels. In: Ann. Soc. Polon. Math., 1947-48, vol. 20, p. 314-322.
+
+\end{thebibliography}
+
+\newpage
+
+\begin{center}
+\section*{\bf DECLARAȚIA PRIVIND ASUMAREA RĂSPUNDERII}
+\end{center}
+\addcontentsline{toc}{section}{\bf DECLARAȚIA PRIVIND ASUMAREA RĂSPUNDERII}
+
+\strut
+
+Subsemnatul, declar pe răspundere personală că materialele prezentate în teza de doctorat sunt rezultatul propriilor cercetări și realizări științifice. Conștientizez că, în caz contrar, urmează să suport consecințele în conformitate cu legislația în vigoare. 
+
+\vspace{3cm}
+$<$Numele Prenumele autorului$>$
+
+
+\vspace{1cm}
+Semnătura:
+
+\vspace{1cm}
+Data:  
+
+\newpage
+
+\begin{center}
+\section*{CV-ul AUTORULUI}
+\end{center}
+
+\addcontentsline{toc}{section}{\bf CV AL AUTORULUI}
+
+\begin{minipage}{0.5\textwidth}
+{\bf Date personale:}
+
+Numele și prenumele: ...
+
+Data nașterii: ...
+
+Locul nașterii: ...
+
+Cetățenia: ...
+\end{minipage}
+%
+\begin{minipage}{0.5\textwidth}
+\includegraphics[scale=0.6]{eu.jpg}
+\end{minipage}
+
+{\bf Studii:}
+
+...
+
+{\bf Limbi:}
+
+...
+
+{\bf Activitatea profesională:}
+
+...
+
+{\bf Contribuții științifice:}
+
+...
+
+{\bf Domenii de interes:}
+
+...
+
+{\bf Date de contact:}
+
+Telefon: ...
+
+Email: ...
+
+\end{document}
+
